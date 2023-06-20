@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fdf1e0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: #7f6308;
+}
+
+.site-header,
+.site-footer {
+    padding: .5em 4em;
+    text-align: center;
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #7f6308;
+}
+
+.site-main {
+    flex: 1;
+}
+
+.site-footer {
+    border-top: 1px solid #7f6308;
+}
+
+
+.site-header > h1 {
+    font-size: 3em;
+    font-family: Skranji, cursive;
+    color: #7f6308;
+}
+
+.site-main ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 6em 12em;
+    list-style: none;
+}
+
+.site-main li {
+    border: 2px solid #7f6308;
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 2em;
+}
+
+.site-main li:hover {
+    opacity: .8;
+}
+
+.site-main li img {
+    width: 100%;
+    height: 80%;
+}
+
+@media (width <= 690px) {
+    .site-main {
+        padding: 1em .5em;
+    }
+
+    .site-main ul {
+        padding: 1em 2em;
+    }
+}
